@@ -19,7 +19,8 @@ public class GestioneIncendiRunner implements CommandLineRunner {
 		// Creazione del gestore di comunicazione
 		GestoreComunicazione gestoreComunicazione = new GestoreComunicazione(List.of(sonda, sonda2));
 		gestoreComunicazione.aggiungiOsservatore(centroControllo);
-
+		sonda.setLivelloFumo(6);
+		sonda2.setLivelloFumo(6);
 		// Simulazione del rilevamento dell'incendio
 		gestoreComunicazione.rilevaIncendio();
 	}
