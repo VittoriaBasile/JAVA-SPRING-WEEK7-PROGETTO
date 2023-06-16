@@ -13,7 +13,6 @@ public class CentroControlloImpl implements CentroControllo {
 				String url = "http://host/alarm?idsonda=" + sonda.getId() + "&lat=" + sonda.getLatitudine() + "&lon="
 						+ sonda.getLongitudine() + "&smokelevel=" + livelloFumo;
 
-				// Log del percorso completo dell'URL
 				System.out.println(
 						"la sonda con id : " + sonda.getId() + " ha rilevato un livello di fumo maggiore di 5: " + url);
 			}

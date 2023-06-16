@@ -37,15 +37,10 @@ public class TestRilevatoreIncendi {
 		gestoreComunicazione.aggiungiOsservatore(centroControllo);
 		sonda.setLivelloFumo(6);
 
-		// Simulazione del rilevamento dell'incendio
 		gestoreComunicazione.rilevaIncendio();
 
-		// Verifica che l'URL sia stata correttamente generata
 		String expectedUrl = "http://host/alarm?idsonda=1&lat=50.123&lon=10.456&smokelevel=6";
-		// Assumi che il log del percorso completo dell'URL sia stato stampato
-		// Controlla se l'output contiene l'URL atteso
-		// (nell'implementazione reale, si potrebbe verificare l'effettiva invocazione
-		// dell'URL)
+
 		assertTrue(outputStreamCaptor.toString().contains(expectedUrl));
 
 	}
